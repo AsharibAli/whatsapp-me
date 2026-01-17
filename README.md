@@ -240,10 +240,6 @@ bun install
 bun run dev
 ```
 
-### LICENSE
-
-[MIT License](LICENSE)
-
 ### Inspiration
 This plugin was inspired by [Call Me](https://github.com/ZeframLou/call-me)
 
