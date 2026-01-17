@@ -1,0 +1,25 @@
+{
+  "name": "whatsappme",
+  "description": "Bringing Claude Code to your phone with real-time WhatsApp notifications and two-way messaging.",
+  "homepage": "https://github.com/AsharibAli/whatsapp-me",
+  "repository": "https://github.com/AsharibAli/whatsapp-me",
+  "owner": {
+    "name": "Asharib Ali",
+    "email": "contact@asharib.com",
+    "url": "https://asharib.xyz/"
+  },
+  "plugins": [
+    {
+      "name": "whatsappme",
+      "version": "1.0.0",
+      "description": "Get notified on WhatsApp when Claude completes tasks, encounters errors, or needs your input.",
+      "source": "./",
+      "author": {
+        "name": "Asharib Ali",
+        "email": "contact@asharib.com"
+      },
+      "category": "productivity",
+      "keywords": ["whatsapp", "messaging", "notifications", "input", "automation", "mcp"]
+    }
+  ]
+}

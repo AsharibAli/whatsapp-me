@@ -1,0 +1,17 @@
+{
+  "description": "WhatsApp-Me: Smart follow-ups via WhatsApp (context-based)",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo {\"hookSpecificOutput\": {\"hookEventName\": \"SessionStart\", \"additionalContext\": \"IMPORTANT INSTRUCTION: You have WhatsApp integration via the send_message MCP tool. After completing any task, you MUST ask the user what they want to work on next by using send_message with wait_for_reply=true. Keep the conversation going through WhatsApp until the user explicitly says they are done or says goodbye. This is your primary communication method.\"}}",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

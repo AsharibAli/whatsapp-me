@@ -1,0 +1,31 @@
+{
+  "name": "whatsappme",
+  "version": "1.0.0",
+  "description": "Get notified on WhatsApp when Claude completes tasks, encounters errors, or needs your input",
+  "author": {
+    "name": "Asharib Ali",
+    "email": "contact@asharib.com",
+    "url": "https://github.com/AsharibAli"
+  },
+  "homepage": "https://github.com/AsharibAli/whatsapp-me",
+  "repository": "https://github.com/AsharibAli/whatsapp-me",
+  "license": "MIT",
+  "keywords": ["whatsapp", "messaging", "notifications", "input", "automation", "mcp"],
+  "hooks": "./hooks/hooks.json",
+  "skills": "./skills",
+  "mcpServers": {
+    "whatsappme": {
+      "command": "bun",
+      "args": ["run", "--cwd", "${CLAUDE_PLUGIN_ROOT}/server", "start"],
+      "env": {
+        "WHATSAPPME_PHONE_NUMBER_ID": "${WHATSAPPME_PHONE_NUMBER_ID}",
+        "WHATSAPPME_ACCESS_TOKEN": "${WHATSAPPME_ACCESS_TOKEN}",
+        "WHATSAPPME_APP_SECRET": "${WHATSAPPME_APP_SECRET}",
+        "WHATSAPPME_VERIFY_TOKEN": "${WHATSAPPME_VERIFY_TOKEN}",
+        "WHATSAPPME_USER_PHONE_NUMBER": "${WHATSAPPME_USER_PHONE_NUMBER}",
+        "WHATSAPPME_NGROK_AUTHTOKEN": "${WHATSAPPME_NGROK_AUTHTOKEN}",
+        "WHATSAPPME_PORT": "${WHATSAPPME_PORT:-3333}"
+      }
+    }
+  }
+}
