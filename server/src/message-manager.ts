@@ -78,6 +78,17 @@ export class MessageManager {
     this.httpServer = createServer((req, res) => {
       const url = new URL(req.url!, `http://${req.headers.host}`);
 
+      // Root endpoint with project info
+      if (url.pathname === '/' || url.pathname === '') {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({
+          title: 'WhatsApp-Me',
+          description: 'A Claude Code plugin that lets Claude message you on WhatsApp. Get notified on your phone when Claude finishes tasks, runs into errors, or needs your input.',
+          setup_details: 'https://github.com/asharibali/whatsapp-me'
+        }, null, 2));
+        return;
+      }
+
       // Webhook endpoint for Meta WhatsApp
       if (url.pathname === '/webhook') {
         this.handleWhatsAppWebhook(req, res);
